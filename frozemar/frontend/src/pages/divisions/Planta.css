@@ -1,0 +1,54 @@
+.planta-procesadora {
+  width: 100%;
+  padding: 2rem;
+  color: white;
+}
+
+.planta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas */
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Columna del video */
+.planta-video {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(19, 91, 133, 1), rgba(63, 154, 207, 0.53), rgba(29, 104, 128, 0.46));
+  pointer-events: none;
+}
+
+/* Texto */
+.planta-texto {
+  color: white;
+}
+
+/* Imagen destacada (si la quieres) */
+.planta-imagen {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.planta-imagen img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 30px;
+  object-fit

@@ -1,0 +1,144 @@
+/* ==================== Hero / Banner ==================== */
+.hero {
+  background: url('/images/hero-mariscos.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem; /* ya tienes fuente serif global */
+  margin: 0;
+}
+
+.hero-frase {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ==================== Secciones Home ==================== */
+.home-quienes-somos,
+.mision-vision,
+.instalaciones-equipacion,
+.productos-destacados,
+.ubicacion,
+.contacto {
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+/* ==================== Misión y Visión ==================== */
+.mision-vision {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.mision-vision .card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(16, 33, 131, 0.2); /* azul suave */
+}
+
+@media(min-width: 768px) {
+  .mision-vision {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==================== Instalaciones y Equipación ==================== */
+.instalaciones-equipacion .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.instalaciones-equipacion .card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(16, 33, 131, 0.2);
+}
+
+@media(min-width: 768px) {
+  .instalaciones-equipacion .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==================== Productos Destacados ==================== */
+.productos-destacados .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.productos-destacados .card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(16, 33, 131, 0.15);
+  font-weight: bold;
+}
+
+@media(min-width: 768px) {
+  .productos-destacados .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ==================== Ubicación ==================== */
+.ubicacion p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* ==================== Contacto ==================== */
+.contacto p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #102183;
+}
+
+/* ==================== Botones para Home ==================== */
+.home-quienes-somos .btn,
+.productos-destacados .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #102183;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.home-quienes-somos .btn:hover,
+.productos-destacados .btn:hover {
+  background-color: #1c2fa0;
+}
+
+/* ==================== Responsividad adicional ==================== */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-frase {
+    font-size: 1rem;
+  }
+  .mision-vision .card,
+  .instalaciones-equipacion .card,
+  .productos-destacados .card {
+    padding: 1rem;
+  }
+}

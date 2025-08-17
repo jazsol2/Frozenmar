@@ -1,0 +1,146 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  /* Cambia el fondo a uno más neutro o claro */
+  background-color: #ffffff; /* o el que desees */
+}
+
+
+
+/* Y luego tus estilos para a, button, ul, img, etc */
+/* ====== ESTILOS GLOBALES ====== */
+
+/* Reset básico para evitar márgenes y padding por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #ffffff; /* Fondo blanco limpio */
+  color: #333; /* Texto gris oscuro elegante */
+  font-family: 'Roboto', sans-serif; /* Fuente base para párrafos */
+  line-height: 1.6;
+}
+
+/* ====== TÍTULOS ====== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #102183; /* Azul corporativo elegante */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem; /* grande para encabezados principales */
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4{
+  font-size: 1.3rem;
+}
+
+/* ====== PÁRRAFOS ====== */
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: #444; /* Un tono gris suave */
+}
+
+/* ====== ENLACES ====== */
+a {
+  color: #102183;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1c2fa0;
+}
+
+/* ====== IMÁGENES RESPONSIVAS ====== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== BOTONES ====== */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #102183;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1c2fa0;
+}
+
+.caja-testimonio {
+  flex: 1 1 300px; /* crece pero mínimo 300px */
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 40px 30px;
+  border-left: 5px solid #102183;
+  border-radius: 8px;
+  font-style: italic;
+  max-width: 400px;
+  text-align: center;
+}
+.caja-testimonio span {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, h5, h6 {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify; /* justificacion del texto */
+  }
+  h4{
+    text-align: center;
+  }
+    /* Reducir márgenes en títulos y párrafos solo en móvil */
+  .site-main h1, h2, h3, p {
+    margin: 30px;
+    padding: 0 20px; /* un poquito de aire a los lados */
+  }
+
+    .caja-testimonio {
+    max-width: 80%;
+    padding: 20px 15px;     /* antes 40px 30px, ahora más reducido */
+  }
+
+  .contenedor-texto,
+  .caja {
+    margin: 5px 0;          /* menos margen vertical */
+    padding: 8px;
+  }
+  
+}

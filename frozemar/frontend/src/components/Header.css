@@ -1,0 +1,160 @@
+.site-header {
+  background-color: #ffffff;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Frase arriba del menú */
+.header-tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f7f7f7; /* color letra */
+  background-color: #385a9e; /* color fondo */
+  margin-bottom: 8px;
+  padding: 5px 0;
+}
+
+/* Menú principal */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: max-height 0.3s ease;
+}
+
+ul.topnav li {
+  margin: 0 15px;
+}
+
+ul.topnav li a {
+  display: block;
+  color: rgb(16, 33, 131);
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+  color: #1497e2b6;
+  border-radius: 4px;
+}
+
+ul.topnav li a.active {
+  color: #329eb1;
+  border-radius: 4px;
+}
+
+/* Logo */
+.logo-item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 110px;
+  height: auto;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #102183;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+  /* Botón hamburguesa visible */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menú cerrado por defecto */
+  ul.topnav {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* Menú abierto */
+  ul.topnav.open {
+    max-height: 500px; /* suficiente para mostrar todos los links */
+  }
+
+  ul.topnav li {
+    margin: 8px 0;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px 14px;
+  color: rgb(16, 33, 131);
+}
+
+.dropdown-toggle:hover {
+  color: #1497e2b6;
+  border-radius: 4px;
+}
+
+/* Ocultar menú por defecto en desktop */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  width: 200px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: rgb(16, 33, 131);
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mostrar dropdown en desktop al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive: dropdown como menú normal en móvil */
+@media screen and (max-width: 768px) {
+  .dropdown-menu {
+    display: block; /* En móvil React lo renderiza solo si está abierto */
+    position: static;
+    border: none;
+    width: 100%;
+  }
+}

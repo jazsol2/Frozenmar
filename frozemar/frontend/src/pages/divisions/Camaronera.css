@@ -1,0 +1,114 @@
+.camaronera {
+  padding-top: 10cm;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+
+  /* Imagen de fondo con degradado */
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba(45, 115, 180, 0.58), /* parte superior transparente */
+      rgba(63, 154, 207, 0.83), /* medio */
+      rgba(19, 91, 133, 1)    /* parte inferior oscura */
+    ),
+    url("../../assets/fondo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  
+}
+
+.camaronera-body {
+  display: flex;
+  gap: 50px; /* separación entre columnas */
+  align-items: flex-start;
+  padding: 40px 20px;  /* espacio interno: 40px arriba/abajo, 20px izquierda/derecha */
+  max-width: 1200px;   /* limita el ancho del contenido */
+  margin: 0 auto;   
+  justify-content: center;
+  flex-wrap: wrap; /* se acomoda en móvil */
+  margin-bottom: 40px; /* espacio antes de la galería */
+}
+
+.camaronera-text {
+  flex: 1 1 500px; /* crece pero mínimo 500px */
+  color: white;
+}
+
+.content-wrapper {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.camaronera h3
+.camaronera h2,
+.camaronera h1,
+.camaronera p{
+  color: aliceblue;
+}
+
+
+.gallery-slider img {
+  width: 40%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;       /* para que el margin funcione */
+  margin: 0 auto;       /* centra la imagen horizontalmente */
+  position: relative;
+}
+
+/* Slick Carousel estilos base */
+.slick-prev, .slick-next {
+  z-index: 2;
+}
+
+.slick-dots li button:before {
+  color: #102183;
+}
+
+/* Flechas personalizadas */
+/* Tamaño de las flechas (más pequeñas) */
+.custom-arrow img {
+  width: 50px;   /* ajusta a tu gusto */
+  height: 50px;
+}
+
+/* Base de las flechas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* centra verticalmente */
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.5s ease;
+}
+
+/* Posiciones */
+.prev-arrow { left: 200px; }   /* cerca del borde izquierdo */
+.next-arrow { right: 200px; }  /* cerca del borde derecho */
+
+/* Opcional: hover sutil */
+.custom-arrow:hover { opacity: 0.85; }
+
+/* En móvil, un poco más pequeñas y más cerca */
+@media (max-width: 768px) {
+
+  /* Ajustar el contenedor de la camaronera */
+  .camaronera-body  {
+    padding: 30px 10px;
+    gap: 20px; /* menos espacio entre texto y caja */
+  }
+
+  .custom-arrow img { width: 18px; height: 18px; }
+  .prev-arrow { left: 80px; }
+  .next-arrow { right: 80px; }
+}
+
+

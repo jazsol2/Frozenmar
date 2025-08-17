@@ -1,0 +1,50 @@
+.contactenos-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.contactenos-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; /* Para que sea responsive */
+}
+
+.contactenos-form {
+  flex: 1; /* Ocupa la mitad de la fila */
+  min-width: 300px;
+}
+
+.contactenos-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contactenos-form input,
+.contactenos-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contactenos-form button {
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contactenos-form button:hover {
+  background-color: #0056b3;
+}
+
+.contactenos-mapa {
+  flex: 1; /* Ocupa la otra mitad de la fila */
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
